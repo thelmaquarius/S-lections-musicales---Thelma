@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sélections musicales - Thelma</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="images/favicon_musique.png" type="image/png">
+
+</head>
+<body>
+  
+    <header>Les sélections musicales de Thelma !</header>
+    <br>
+    <h1 class="clignotant">Des morceaux choisis avec soin pour une expérience sonore hors du commun.</h1>
+
+    <br>
+    
+    <div class="liste-musiques"></div>
+    <div class="informations"></div>
+
+<br>
+
+<div class="background"></div>
+
+<div class="menu-container">
+    <div class="menu-button" onclick="scrollToPercentage(0)" title="Accueil">🏠</div>
+    <div class="menu-button" data-image="godspeed" id="1" onclick="scrollToPercentage(13)" title="Musique 1">1</div>
+    <div class="menu-button" data-image="redbone" id="2" onclick="scrollToPercentage(25.8)" title="Musique 2">2</div>
+    <div class="menu-button" data-image="suite" id="3" onclick="scrollToPercentage(38)" title="Musique 3">3</div>
+    <div class="menu-button" data-image="treasure_in_the_hills" id="4" onclick="scrollToPercentage(51.25)" title="Musique 4">4</div>
+    <div class="menu-button" data-image="something_going_on" id="5" onclick="scrollToPercentage(64)" title="Musique 5">5</div>
+    <div class="menu-button" data-image="gta_san_andreas" id="6" onclick="scrollToPercentage(76.75)" title="Musique 6">6</div>
+</div>
+
+<div class="menu-button-formulaire" title="Formulaire" onclick="scrollToPercentage(100)">📝</div>
+
+  <hr>
+
+  <h2 class="titreFormulaire">Une musique à proposer ?</h2>
+  <h3 class="descriptionFormulaire">• Remplissez ce formulaire pour proposer une musique à ajouter sur le site :</h3>
+  <small id="descriptionFormulaire-info" class="formulaireInfo">Les champs marqués d'une astérisque (*) sont obligatoires.</small>
+  <br> <br>
+  <form id="formulaire">
+
+  <label for="titre">Titre de la musique :*</label>
+  <br>
+  <textarea id="titre" rows="1" cols="30" required></textarea>
+  <small id="erreur-titre" class="erreur"></small>
+  <br> <br>
+  <label for="artiste">Artiste(s) :*</label>
+  <br>
+  <textarea id="artiste" rows="1" cols="30" required></textarea>
+  <small id="erreur-artiste" class="erreur"></small>
+  <br> <br>
+  <label for="description">Description de la musique :*</label>
+  <br>
+  <small id="description-info" class="info">3 à 300 caractères autorisés.</small>
+  <br>
+  <textarea id="description" rows="4" cols="30" minlength="3" maxlength="300" required></textarea>
+  <small id="erreur-description" class="erreur"></small>
+  <br> <br>
+  <label for="url">URL de la musique :* </label>
+  <br>
+  <input type="url" id="url" required placeholder="https://exemple.com"></input>
+  <small id="erreur-url" class="erreur"></small>
+  <br> <br>
+  <button type="button" id="bouton">Valider</button>
+
+  </form>
+
+  <br>
+
+  <footer>
+    <button id="credits">Afficher les crédits</button>
+    <div id="creditsSection" class="credits-section">
+        <p class="droits">Tous les droits d'auteur et de propriété intellectuelle relatifs aux musiques présentées sont strictement réservés à leurs créateurs et détenteurs respectifs.</p>
+        <ul>
+            <li>Développement du site & Design graphique : Thelma Tabury</li>
+            <li>Musiques & Couvertures des musiques :</li>
+            <ul>
+                <li>Godspeed - Frank Ocean : ℗ 2016 Boys Don't Cry</li>
+                <li>Redbone - Childish Gambino : © 2016 McDJ Entertainment under exclusive license to Glassnote Entertainment Group LLC</li>
+                <li>SUITE - La Fève : © 2023 Walone, distribution exclusive ADA France</li>
+                <li>Treasure In The Hills - Leon Thomas : © ℗ 2023 UMG Recordings, Inc. & EZMNY Records, LLC</li>
+                <li>Something Going On (Kompa Gouyad Extended Mix) - Kaysha : © 2020 Sushiraw</li>
+                <li>Grand Theft Auto: San Andreas (Official Theme Song) - Michael Hunter : © 2004 Rockstar Games</li>
+            </ul>
+            <li>Icônes :</li>
+            <ul>
+                <li>Favicon : Flaticon</li>
+                <li>Logo de Spotify : Spotify</li>
+                <li>Logo de YouTube : YouTube</li>
+                <li>Logo de Deezer : Deezer</li>
+            </ul>
+            <li>Polices :</li>
+                <ul>
+                    <li>Google Fonts - Police "IBM Plex Sans"</li>
+                    <li>Google Fonts - Police "Outfit"</li>
+                </ul>
+            <li>Hébergement : Université Gustave Eiffel</li>
+            <li>Nom de domaine : Université Gustave Eiffel</li>
+            <br>
+    
+        </ul>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
